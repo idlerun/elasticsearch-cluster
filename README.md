@@ -2,7 +2,7 @@
 page: https://idle.run/elasticsearch-cluster
 title: ElasticSearch Cluster on Docker 1.12 Swarm
 tags: ip-camera, youtube
-date: 2016-08-12
+date: 2016-11-19
 ---
 
 ## Machines
