@@ -145,15 +145,15 @@ docker logs $(docker ps -aq) | grep o.e.c.s.ClusterService
 ```
 
 ```
-[2016-11-18T18:44:05,813][INFO ][o.e.c.s.ClusterService   ] [epbWb8a] new_master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300}, added {{k9P08mI}{k9P08mIURR6eJNjSFbJc4w}{SOjMEOu5QhWXgRq0nsRYkA}{10.0.9.5}{10.0.9.5:9300},{knSkfDC}{knSkfDCnRA2i0-caESm2JA}{XgSMoGUnRdeYAsxWn7QzmQ}{10.0.9.4}{10.0.9.4:9300},}, reason: zen-disco-elected-as-master ([2] nodes joined)[{k9P08mI}{k9P08mIURR6eJNjSFbJc4w}{SOjMEOu5QhWXgRq0nsRYkA}{10.0.9.5}{10.0.9.5:9300}, {knSkfDC}{knSkfDCnRA2i0-caESm2JA}{XgSMoGUnRdeYAsxWn7QzmQ}{10.0.9.4}{10.0.9.4:9300}]
+[2016-11-18T18:44:05,813][INFO ][o.e.c.s.ClusterService   ] [epbWb8a] new_master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300}, added {k9P08mI}{k9P08mIURR6eJNjSFbJc4w}{SOjMEOu5QhWXgRq0nsRYkA}{10.0.9.5}{10.0.9.5:9300},{knSkfDC}{knSkfDCnRA2i0-caESm2JA}{XgSMoGUnRdeYAsxWn7QzmQ}{10.0.9.4}{10.0.9.4:9300},}, reason: zen-disco-elected-as-master ([2] nodes joined)[{k9P08mI}{k9P08mIURR6eJNjSFbJc4w}{SOjMEOu5QhWXgRq0nsRYkA}{10.0.9.5}{10.0.9.5:9300}, {knSkfDC}{knSkfDCnRA2i0-caESm2JA}{XgSMoGUnRdeYAsxWn7QzmQ}{10.0.9.4}{10.0.9.4:9300}]
 ```
 
 ```
-[2016-11-18T18:44:05,832][INFO ][o.e.c.s.ClusterService   ] [knSkfDC] detected_master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300}, added {{k9P08mI}{k9P08mIURR6eJNjSFbJc4w}{SOjMEOu5QhWXgRq0nsRYkA}{10.0.9.5}{10.0.9.5:9300},{epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300},}, reason: zen-disco-receive(from master [master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300} committed version [1]])
+[2016-11-18T18:44:05,832][INFO ][o.e.c.s.ClusterService   ] [knSkfDC] detected_master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300}, added {k9P08mI}{k9P08mIURR6eJNjSFbJc4w}{SOjMEOu5QhWXgRq0nsRYkA}{10.0.9.5}{10.0.9.5:9300},{epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300},}, reason: zen-disco-receive(from master [master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300} committed version [1]])
 ```
 
 ```
-[2016-11-18T18:44:05,832][INFO ][o.e.c.s.ClusterService   ] [k9P08mI] detected_master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300}, added {{knSkfDC}{knSkfDCnRA2i0-caESm2JA}{XgSMoGUnRdeYAsxWn7QzmQ}{10.0.9.4}{10.0.9.4:9300},{epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300},}, reason: zen-disco-receive(from master [master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300} committed version [1]])
+[2016-11-18T18:44:05,832][INFO ][o.e.c.s.ClusterService   ] [k9P08mI] detected_master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300}, added {knSkfDC}{knSkfDCnRA2i0-caESm2JA}{XgSMoGUnRdeYAsxWn7QzmQ}{10.0.9.4}{10.0.9.4:9300},{epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300},}, reason: zen-disco-receive(from master [master {epbWb8a}{epbWb8a-RE2lbXcLn8bN1Q}{thuHs3dBQWKcldQDG4_ijg}{10.0.9.3}{10.0.9.3:9300} committed version [1]])
 ```
 
 Note that all 3 nodes have detected `epbWb8a` as the master
@@ -184,6 +184,7 @@ Ensure that the cluster status is green, and that number of nodes is as expected
 
 ###### Add an index with shard and replica settings
 
+```bash
 curl -XPUT 'localhost:9200/blogs?pretty' -d'
 {
    "settings" : {
@@ -191,6 +192,7 @@ curl -XPUT 'localhost:9200/blogs?pretty' -d'
       "number_of_replicas" : 1
    }
 }'
+```
 
 ###### Modify replica config at any time
 
