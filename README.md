@@ -8,6 +8,7 @@ date: 2016-11-19
 ## Machines
 
 For this example configuration, set up 3 Ubuntu virtual machines running in AWS:
+
 - `manager1`
 - `worker1`
 - `worker2`
