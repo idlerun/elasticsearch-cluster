@@ -1,4 +1,6 @@
 ---
+reponame: elasticsearch-cluster
+layout: repo
 page: https://idle.run/elasticsearch-cluster
 title: ElasticSearch Cluster on Docker 1.12 Swarm
 tags: ip-camera, youtube
@@ -13,7 +15,7 @@ For this example configuration, set up 3 Ubuntu virtual machines running in AWS:
 - `worker1`
 - `worker2`
 
-#### Security Group:
+### Security Group:
 
 - Create a security group with port 22 (ssh) inbound
 - Note down the created security group ID
@@ -24,7 +26,7 @@ For this example configuration, set up 3 Ubuntu virtual machines running in AWS:
 
 ## OS Setup
 
-#### Install Docker
+### Install Docker
 
 Install Docker according to [install instructions](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
 
@@ -35,7 +37,7 @@ sudo apt-get update
 sudo apt-get install -y docker-engine
 ```
 
-#### Set required params
+### Set required params
 
 ElasticSearch will fail to start if `max_map_count` is set too low
 
@@ -68,7 +70,7 @@ docker swarm join \
     192.168.99.100:2377
 ```
 
-###### Check swarm status
+### Check swarm status
 
 On `manager1` run commands and verify output is sane
 
@@ -122,9 +124,9 @@ docker service create \
 - Docs for Zen Discovery are available [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-discovery-zen.html)
 - Docs for ElasticSearch network options are available [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-network.html)
 
-#### Docker Service Status
+### Docker Service Status
 
-###### Verify service status on master node
+#### Verify service status on master node
 
 ```bash
 docker service ps elasticsearch
@@ -139,7 +141,7 @@ ID                         NAME               IMAGE          NODE      DESIRED S
 cjw8npstwi1zqythx1rhr75fj   \_ elasticsearch  elasticsearch  worker2   Running        Running 34 seconds ago
 ```
 
-###### Check logs for cluster status on each Docker node
+#### Check logs for cluster status on each Docker node
 
 ```bash
 docker logs $(docker ps -aq) | grep o.e.c.s.ClusterService
@@ -162,7 +164,7 @@ Note that all 3 nodes have detected `epbWb8a` as the master
 
 ## ElasticSearch Cluster
 
-#### Initial Health
+### Initial Health
 
 On any node run the following
 
@@ -181,9 +183,9 @@ Ensure that the cluster status is green, and that number of nodes is as expected
 ...
 ```
 
-#### Test an Index
+### Test an Index
 
-###### Add an index with shard and replica settings
+#### Add an index with shard and replica settings
 
 ```bash
 curl -XPUT 'localhost:9200/blogs?pretty' -d'
@@ -195,7 +197,7 @@ curl -XPUT 'localhost:9200/blogs?pretty' -d'
 }'
 ```
 
-###### Modify replica config at any time
+##### To modify replica config later
 
 ```bash
 curl -XPUT 'localhost:9200/blogs/_settings?pretty' -d'
@@ -206,7 +208,7 @@ curl -XPUT 'localhost:9200/blogs/_settings?pretty' -d'
 }'
 ```
 
-###### Add some data
+#### Add some data
 
 ```bash
 curl -XPUT 'localhost:9200/blogs/entry/123?pretty' -d'
@@ -223,7 +225,7 @@ curl -XPUT 'localhost:9200/blogs/entry/456?pretty' -d'
 }'
 ```
 
-###### Verify replication
+#### Verify replication
 
 Check cluster health again, this time specifically for the `blogs` index
 
@@ -259,7 +261,7 @@ Note that no `--link` is required (or possible) for services. Instead all servic
 
 For further config options see the [docker hub: kibana](https://hub.docker.com/_/kibana/) page
 
-#### Connect to Kibana
+### Connect to Kibana
 
 Use `ssh` to forward port 5601 to one of your nodes
 
