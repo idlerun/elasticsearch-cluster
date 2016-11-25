@@ -3,7 +3,7 @@ reponame: elasticsearch-cluster
 layout: repo
 page: https://idle.run/elasticsearch-cluster
 title: ElasticSearch Cluster on Docker 1.12 Swarm
-tags: ip-camera, youtube
+tags: elasticsearch, docker
 date: 2016-11-19
 ---
 
